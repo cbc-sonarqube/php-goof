@@ -1,0 +1,22 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: sonar-so-config
+on:
+  push:
+    branches:
+      - "**"
+jobs:
+  build:
+    steps:
+      - name: Say hello
+        run: |
+          echo "hello world"
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+      - name: run scan
+        kind: scan
+        uses: cloudbees-io/sonarqube-sast-scan-code@v1
+        with:
+          server-url: https://sonarqube.demo.cbc.beescloud.com
+          username: admin
+          password: s0narQube123
