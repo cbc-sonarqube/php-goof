@@ -1,10 +1,7 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: Test QA
+name: Sonar-bundled-so
 on:
-  push:
-    branches:
-      - "**"
   workflow_dispatch:
 permissions:
   scm-token-own: read
