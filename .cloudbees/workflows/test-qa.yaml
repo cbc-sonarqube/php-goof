@@ -14,8 +14,9 @@ jobs:
     steps:
       - name: Get source code
         uses: cloudbees-io/checkout@v1
-      - name: Run sonarqube bundled action from platform
+      - name: Run scan
         with:
-          language: LANGUAGE_OTHER
-        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
+          orgname: cloudbees-compliance-partner-development
+          token: 5187082e-6732-489e-8bcd-c7e8a7341d81
+        uses: cloudbees-io/snyk-sast-scan-code@v1
         id: run-bundled-sonar-scan
