@@ -16,6 +16,6 @@ jobs:
         uses: cloudbees-io/checkout@v1
       - name: Run sonarqube bundled action from platform
         with:
-          language: LANGUAGE_PHP
-        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
+          language: LANGUAGE_OTHER
+        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
         id: run-bundled-sonar-scan
