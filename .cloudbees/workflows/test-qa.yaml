@@ -1,0 +1,21 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: Test QA
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+permissions:
+  scm-token-own: read
+  scm-token-org: read
+jobs:
+  run-unit-test:
+    steps:
+      - name: Get source code
+        uses: cloudbees-io/checkout@v1
+      - name: Run sonarqube bundled action from platform
+        with:
+          language: LANGUAGE_PHP
+        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
+        id: run-bundled-sonar-scan
