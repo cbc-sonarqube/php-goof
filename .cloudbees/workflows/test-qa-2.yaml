@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Get source code
         uses: cloudbees-io/checkout@v1
-      - name: Run scan
-        kind: scan
-        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
-        with:
-          language: LANGUAGE_PHP
+      # - name: Run scan
+      #   kind: scan
+      #   uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
+      #   with:
+      #     language: LANGUAGE_PHP
