@@ -12,7 +12,7 @@ test12345678
 - Mysql or MariaDB 
 - Composer 2
 
-Run composer install from the project root directory
+Run composer install from the project root directory1
 
 Create mysql or mariaDB database and update the db.php file, with database details. 
 
