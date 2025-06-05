@@ -16,7 +16,7 @@ Run composer install from the project root directory1
 
 Create mysql or mariaDB database and update the db.php file, withtest database detatetsils. 
 
-Import sql/database.sql file into the newly created database or run the following table create.
+Import sql/database.sql file into the newly created database or run the following test table create.
 
 ```
 CREATE TABLE `task` (
