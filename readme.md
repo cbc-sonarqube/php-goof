@@ -14,7 +14,7 @@ test12345678
 
 Run composer install from the project root directory1
 
-Create mysql or mariaDB database and update the db.php file, with database detatetsils. 
+Create mysql or mariaDB database and update the db.php file, withtest database detatetsils. 
 
 Import sql/database.sql file into the newly created database or run the following table create.
 
